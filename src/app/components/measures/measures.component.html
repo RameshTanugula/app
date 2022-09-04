@@ -1,0 +1,14 @@
+<!-- <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button> -->
+
+<mat-horizontal-stepper class="step-styles" [linear]="isLinear" #stepper="matHorizontalStepper">
+  <mat-step *ngFor="let step of steps" [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+        <app-measures-form *ngIf= "step.data" 
+        [data]="step.data" [title]="step.title"></app-measures-form>
+      <div style="padding-top: 10%">  
+        <button class="button-styles" *ngIf="step.prevButton"  mat-button matStepperPrevious>Back</button>
+        &nbsp; <button class="button-styles" *ngIf="step.nextButton" mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+</mat-horizontal-stepper>

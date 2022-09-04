@@ -1,0 +1,32 @@
+.main-div {
+    display: inline-flex;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content {
+    padding-left: 5%
+}
+
+.button-style {
+
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 15px;
+}
+.main{
+    padding-left: 15%;
+    /* background-color: #FF5733; */
+}
+.title-text{
+    background-color: white;
+    border-radius: 53px;
+    padding: 10px;
+}

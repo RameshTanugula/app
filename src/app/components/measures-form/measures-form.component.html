@@ -1,0 +1,12 @@
+<p class="title"><span class="title-text">{{title}}</span></p>
+<div class="main">
+<div *ngFor="let d of data; let i=index" class="main-div">
+    <span>
+    <button (click)="onClickButton(i)" class="button-style" 
+    [style.background-color]="d.isSelected ? 'green' :  'white'"></button>
+    </span>
+    <span class="content">
+    <p class="title-text">{{d.content}}</p>
+    </span>
+</div>
+</div>
