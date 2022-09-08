@@ -1,0 +1,17 @@
+{isSelected: false, content:"Car parking spaces directly in front of / under each building", value: 3},
+{isSelected: false, content:"Bundled parking spaces (neighborhood garage)", value:-3},
+{isSelected: false, content:"Generous parking spaces in public areas", value:2},
+{isSelected: false, content:"Reduction of existing parking spaces in public areas", value:-3},
+{isSelected: false, content:"No parking spaces in case of proven car abandonment", value:-2},
+{isSelected: false, content:"Green wave specially adapted to MIV", value:2},
+{isSelected: false, content:"Disturbance of motor vehicle flow at traffic lights", value: -2},
+{isSelected: false, content:"Street space design optimized for motor vehicles", value:2},
+{isSelected: false, content:"Access restrictions (e.g. low emission zone)", value: -2},
+{isSelected: false, content:"Parking guidance system (facilitated search for parking spaces)", value: 1}	
+{isSelected: false, content:"Mixed traffic with cyclists", value: -1}
+{isSelected: false, content:"Reduction of maximum speed", value: -1},
+{isSelected: false, content:"Lack of visibility at junctions", value: -2}
+{isSelected: false, content:"Parking space management (for beneficiaries)", value: 1},
+{isSelected: false, content:"No separation of conflict flows at traffic lights", value:	-1},
+{isSelected: false, content:"Generously dimensioned parking stands and access roads", value: 1},
+{isSelected: false, content:"Parking space management (for payers)", value:	-1}

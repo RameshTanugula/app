@@ -1,6 +1,6 @@
 .main-div {
     display: inline-flex;
-    width: 40%;
+    width: 50%;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -24,6 +24,7 @@
 .main{
     padding-left: 15%;
     /* background-color: #FF5733; */
+    padding-top: 30px;
 }
 .title-text{
     background-color: white;
