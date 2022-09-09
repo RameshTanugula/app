@@ -1,0 +1,52 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="title">
+      <th mat-header-cell *matHeaderCellDef style="width: 20%"> Title </th>
+      <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Year1">
+      <th mat-header-cell *matHeaderCellDef> Year1 </th>
+      <td mat-cell *matCellDef="let element"> {{element.y1 | number : '1.2-2'}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Year2">
+      <th mat-header-cell *matHeaderCellDef> Year2 </th>
+      <td mat-cell *matCellDef="let element"> {{element.y2 | number : '1.2-2'}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Year3">
+      <th mat-header-cell *matHeaderCellDef> Year3 </th>
+      <td mat-cell *matCellDef="let element"> {{element.y3 | number : '1.2-2'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Year4">
+        <th mat-header-cell *matHeaderCellDef> Year4 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y4 | number : '1.2-2'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Year5">
+        <th mat-header-cell *matHeaderCellDef> Year5 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y5 | number : '1.2-2'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Year6">
+        <th mat-header-cell *matHeaderCellDef> Year6 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y6 | number : '1.2-2'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Year7">
+        <th mat-header-cell *matHeaderCellDef> Year7 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y7 | number : '1.2-2'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Year8">
+        <th mat-header-cell *matHeaderCellDef> Year8 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y8 | number : '1.2-2'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Year9">
+        <th mat-header-cell *matHeaderCellDef> Year9 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y9 | number : '1.2-2'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Year10">
+        <th mat-header-cell *matHeaderCellDef> Year10 </th>
+        <td mat-cell *matCellDef="let element"> {{element.y10 | number : '1.2-2'}} </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

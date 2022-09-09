@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
-
+import { AppService } from '../../app.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-measures',
   templateUrl: './measures.component.html',
@@ -152,18 +153,25 @@ export class MeasuresComponent implements OnInit {
         { isSelected: false, content: "Generously dimensioned parking stands and access roads", value: 1 },
         { isSelected: false, content: "Parking space management (for payers)", value: -1 }]
     }]
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: FormBuilder,
+    private appService: AppService,
+    private router: Router) {
 
 
   }
-
+  gridData: any = [];
   ngOnInit(): void {
+  }
+  getMeasures() {
+    this.appService.getMeasures().subscribe(data => {
+      this.gridData = data?.res;
+    })
   }
   selectionChange(event: any) {
 
   }
   complete() {
-    this.stepper.selectedIndex = 3;
+    // this.stepper.selectedIndex = 3;
   }
   onSubmit() {
     let sumArray: any = [];
@@ -175,11 +183,16 @@ export class MeasuresComponent implements OnInit {
         }
       })
       sumArray.push(count);
-      count =0;
+      count = 0;
+    }
+    if (sumArray?.length > 0) {
+      this.appService.saveMeasures(sumArray).subscribe((data) => {
+        if (data) {
+          this.getMeasures()
+          this.router.navigateByUrl('/dashboard');
+        }
+      })
     }
 
   }
-  // next(){
-
-  // }
 }
