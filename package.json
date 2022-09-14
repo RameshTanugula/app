@@ -20,6 +20,13 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "bootstrap": "^5.2.1",
+    "chart.js": "^3.9.1",
+    "highcharts": "^10.2.1",
+    "igniteui-angular-charts": "^14.1.1",
+    "igniteui-angular-core": "^14.1.1",
+    "ionic-angular": "^3.9.10",
+    "ng2-charts": "^4.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

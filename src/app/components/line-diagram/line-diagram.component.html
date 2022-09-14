@@ -1,0 +1,11 @@
+<h1 style="text-align: center; margin-top: 20px">Line Diagram</h1>
+<div *ngIf="lineChartData.length>0" style="padding:10%" class="chartjs-block">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend" 
+        [type]="'line'" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>
