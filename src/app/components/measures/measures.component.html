@@ -1,5 +1,6 @@
-<!-- <button mat-raised-button (click)="isLinear = true" id="toggle-linear">Enable linear mode</button> -->
-<mat-horizontal-stepper (selectionChange)="selectionChange($event)" class="step-styles" [linear]="isLinear" #stepper="matHorizontalStepper">
+<!-- <button mat-raised-button (click)="complete()" id="toggle-linear">Enable linear mode</button> -->
+<div *ngIf="!processing">
+<mat-horizontal-stepper [selectedIndex]="selectedIndex" id="toggle-linear" (selectionChange)="selectionChange($event)" class="step-styles" [linear]="isLinear" #stepper="matHorizontalStepper">
   <mat-step *ngFor="let step of steps" [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
         <app-measures-form *ngIf= "step.data" 
@@ -13,3 +14,4 @@
     </form>
   </mat-step>
 </mat-horizontal-stepper>
+</div>

@@ -1,5 +1,18 @@
 <h1 style="text-align: center; margin-top: 20px">Line Diagram</h1>
-<div *ngIf="lineChartData.length>0" style="padding:10%" class="chartjs-block">
+<div style="width: 100%; display: flex;">
+<div style="display: inline-grid;padding-left: 3rem; margin-top: 4rem;">
+    <div *ngFor="let cat of categories">
+    <div  class="button-item" (click)="onClickButton(cat)">
+    
+    <span >{{cat.title}}</span> &nbsp;
+    <button  class="button-styles"></button>
+    </div>
+    </div>
+    <div><button (click)="onClickButton(-1)">Start New Entry</button> &nbsp;
+        <button (click)="onClickButton(-2)" style="padding-left: 5px;">Goto Dashboard</button></div>
+</div>
+
+<div *ngIf="lineChartData.length>0" style="padding: 10%; width: 60%; margin-top: -8rem;" class="chartjs-block">
     <canvas baseChart 
         [datasets]="lineChartData" 
         [labels]="lineChartLabels" 
@@ -8,4 +21,5 @@
         [type]="'line'" 
         [plugins]="lineChartPlugins">
     </canvas>
+</div>
 </div>

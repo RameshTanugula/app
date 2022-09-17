@@ -17,9 +17,9 @@ export class TableComponent implements OnInit {
   }
   getMeasures() {
     this.appService.getMeasures().subscribe(data => {
-      this.dataSource = data?.res;
+      this.dataSource = data?.res[0];
       let list: any = [];
-      data.res.forEach((obj: any) => {
+      data.res[0].forEach((obj: any) => {
         if (obj.years) {
           const tmpValue = obj.years?.split(',');
           if (tmpValue) {

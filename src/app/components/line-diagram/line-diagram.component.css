@@ -1,0 +1,16 @@
+.button-styles {
+    border-radius: 50%;
+    width: 20px;
+    height: 18px;
+    float: right;
+    background-color: white;
+}
+.button-item {
+    background-color: #FF5733;
+    height: 2rem;
+    width: 15rem;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 6px;
+    padding-bottom: 0px;
+}

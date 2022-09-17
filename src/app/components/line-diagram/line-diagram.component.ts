@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ChartDataset, ChartOptions } from 'chart.js';
 import { AppService } from 'src/app/app.service';
 
@@ -9,8 +10,16 @@ import { AppService } from 'src/app/app.service';
 })
 
 export class LineDiagramComponent implements OnInit {
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService, private router: Router) {
   }
+  categories = [
+    {title:"Population count", id:0},
+    {title:"Compact City", id:1},
+    {title:"Economic power", id:2},
+    {title:"Walking Accessibility", id:3},
+    {title:"Bicycle Accessibility", id:4},
+    {title:"Public Transport Accessibility", id:5},
+    {title:"Motor Vehicle Accessibility", id:6}];
   lineChartData: ChartDataset[] = [];
 
   lineChartOptions = {
@@ -34,7 +43,7 @@ export class LineDiagramComponent implements OnInit {
   }
   loadData() {
     this.appService.getMeasures().subscribe(data => {
-      data?.res.forEach((obj: any) => {
+      data?.res[0].forEach((obj: any) => {
         const value = obj.years?.split(',')?.map((str: string) => {
           return Number(str);
         });
@@ -45,7 +54,19 @@ export class LineDiagramComponent implements OnInit {
 
   lineChartLabels = ['', '', '', '', '', '', ''];
 
-
+  onClickButton(item:any){
+    if (window.confirm("Do you really want to leave?")) {
+    
+    if(item === -1){
+      this.router.navigateByUrl('/select-measures');
+    } else if(item === -2){
+      this.router.navigateByUrl('/dashboard');
+    } else{
+    window.localStorage.setItem("selectedIndex", item.id);
+    this.router.navigateByUrl('/select-measures');
+    }
+  }
+}
 }
 
 

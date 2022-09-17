@@ -11,10 +11,8 @@ export class MeasuresFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.title, '----data$')
   }
   onClickButton(i: number){
 this.data[i]['isSelected'] = !this.data[i]['isSelected'];
-console.log(i, ';index', this.data)
   }
 }
